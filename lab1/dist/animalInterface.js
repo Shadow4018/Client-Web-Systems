@@ -39,4 +39,13 @@ class Fish {
         console.log(`${this.name} swims in the water.`);
     }
 }
+const myCat = new Cat("Світанок", 3);
+const myBird = new Bird("Едмонд Француа ІІ");
+const myFish = new Fish("Немо");
+console.log("--- Тестування тварин ---");
+myCat.move();
+if (myCat.makeSound)
+    myCat.makeSound();
+myBird.move();
+myFish.move();
 //# sourceMappingURL=animalInterface.js.map
