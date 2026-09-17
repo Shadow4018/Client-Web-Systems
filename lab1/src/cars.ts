@@ -25,7 +25,7 @@ class Tesla extends Car {
     }
 
     displayInfo(): void {
-        console.log(`[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | Батарея: ${this.batteryCapacity} kWh`);
+        console.log("[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | Батарея: ${this.batteryCapacity} kWh");
     }
 }
 
@@ -39,7 +39,7 @@ class BMW extends Car {
 
     displayInfo(): void {
         const packageInfo = this.isMPackage ? "Так" : "Ні";
-        console.log(`[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | M-Пакет: ${packageInfo}`);
+        console.log("[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | M-Пакет: ${packageInfo}");
     }
 }
 
@@ -52,7 +52,7 @@ class Toyota extends Car {
     }
 
     displayInfo(): void {
-        console.log(`[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | Оцінка надійності: ${this.durabilityScore}/10`);
+        console.log("[Авто]: ${this.brand} ${this.model} | VIN: ${this.getVin()} | Оцінка надійності: ${this.durabilityScore}/10");
     }
 }
 

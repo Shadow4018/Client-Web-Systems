@@ -8,10 +8,10 @@ class Cat {
         this.age = age;
     }
     move() {
-        console.log(`${this.name} runs on four paws.`);
+        console.log("${this.name} runs on four paws.");
     }
     makeSound() {
-        console.log(`${this.name} says: Meow!`);
+        console.log("${this.name} says: Meow!");
     }
 }
 class Bird {
@@ -23,10 +23,10 @@ class Bird {
     }
     move() {
         if (this.canFly) {
-            console.log(`${this.name} flies in the sky.`);
+            console.log("${this.name} flies in the sky.");
         }
         else {
-            console.log(`${this.name} walks on the ground (like a penguin).`);
+            console.log("${this.name} walks on the ground (like a penguin).");
         }
     }
 }
@@ -36,7 +36,7 @@ class Fish {
         this.name = name;
     }
     move() {
-        console.log(`${this.name} swims in the water.`);
+        console.log("${this.name} swims in the water.");
     }
 }
 const myCat = new Cat("Світанок", 3);

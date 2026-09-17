@@ -32,7 +32,7 @@ function orderIceCream() {
     if (addMarshmallow && addMarshmallow.toLowerCase() === "yes") {
         totalCost += 5;
     }
-    const resultMessage = `Cost of your ice cream: ${totalCost} UAH`;
+    const resultMessage = "Cost of your ice cream: ${totalCost} UAH";
     console.log(resultMessage);
     alert(resultMessage);
 }
