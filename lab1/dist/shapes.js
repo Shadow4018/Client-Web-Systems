@@ -74,5 +74,5 @@ console.log("ЗАГАЛЬНА ПЛОЩА: ${totalArea.toFixed(2)}");
 console.log("ЗАГАЛЬНИЙ ПЕРИМЕТР: ${totalPerimeter.toFixed(2)}");
 console.log("\n--- Після масштабування (х2) ---");
 shapesArray[1].scale(2);
-console.log("Нова площа прямокутника: ${shapesArray[1].getArea().toFixed(2)}");
+console.log("Нова площа прямокутника: ${shapesArray[1]!.getArea().toFixed(2)}");
 //# sourceMappingURL=shapes.js.map

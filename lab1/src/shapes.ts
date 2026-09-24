@@ -89,13 +89,13 @@ for (const shape of shapesArray) {
     totalArea += shape.getArea();
     totalPerimeter += shape.getPerimeter();
     // Використовуємо .toFixed(2) щоб округлити до 2 знаків після коми
-    console.log("Площа: ${shape.getArea().toFixed(2)}, Периметр: ${shape.getPerimeter().toFixed(2)}");
+    console.log("Area: ${shape.getArea().toFixed(2)}, Perimeter: ${shape.getPerimeter().toFixed(2)}");
 }
 
 console.log("----------------------------");
-console.log("ЗАГАЛЬНА ПЛОЩА: ${totalArea.toFixed(2)}");
-console.log("ЗАГАЛЬНИЙ ПЕРИМЕТР: ${totalPerimeter.toFixed(2)}");
+console.log("Total Area: ${totalArea.toFixed(2)}");
+console.log("Total Perimeter: ${totalPerimeter.toFixed(2)}");
 
-console.log("\n--- Після масштабування (х2) ---");
+console.log("\n--- After scaling (x2) ---");
 shapesArray[1]!.scale(2); 
-console.log("Нова площа прямокутника: ${shapesArray[1]!.getArea().toFixed(2)}");
+console.log("New area of rectangle: ${shapesArray[1]!.getArea().toFixed(2)}");
