@@ -18,7 +18,7 @@ class Developer extends Employee {
         return this.salary * 0.10; // Бонус 10%
     }
     pay() {
-        console.log("[Виплата] Розробник ${this.name} отримав зарплату: ${this.salary} грн.");
+        console.log("[Payment] Developer ${this.name} received salary: ${this.salary} UAH.");
     }
 }
 class Manager extends Employee {
@@ -29,16 +29,16 @@ class Manager extends Employee {
         return this.salary * 0.20; // Бонус 20%
     }
     pay() {
-        console.log("[Виплата] Менеджер ${this.name} отримав зарплату: ${this.salary} грн.");
+        console.log("[Payment] Manager ${this.name} received salary: ${this.salary} UAH.");
     }
 }
 const employees = [
-    new Developer("Олександр", 25, 45000),
-    new Developer("Марія", 23, 40000),
-    new Manager("Андрій", 35, 70000)
+    new Developer("Arnold", 25, 45000),
+    new Developer("Mari", 23, 40000),
+    new Manager("Nira", 35, 70000)
 ];
 let totalAnnualBonus = 0;
-console.log("--- Зарплати та бонуси ---");
+console.log("--- Salaries and Bonuses ---");
 for (const emp of employees) {
     // Оскільки метод pay() є в Payable, а не в Employee,
     // ми вказуємо компілятору, що в даному випадку emp також є Payable.
@@ -46,8 +46,8 @@ for (const emp of employees) {
     emp.pay();
     const bonus = emp.getAnnualBonus();
     totalAnnualBonus += bonus;
-    console.log("Бонус для ${emp.name}: ${bonus} грн.\n");
+    console.log("Bonus for ${emp.name}: ${bonus} UAH.\n");
 }
 console.log("--------------------------");
-console.log("Загальна сума річних бонусів для всіх: ${totalAnnualBonus} грн.");
+console.log("Total annual bonuses for all: ${totalAnnualBonus} UAH.");
 //# sourceMappingURL=employee.js.map

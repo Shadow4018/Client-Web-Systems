@@ -7,7 +7,7 @@ class OnlineCourse {
     constructor(name, duration) {
         this.name = name;
         this.duration = duration;
-        this.students = []; // ініціалізуємо порожній масив студентів
+        this.students = [];
     }
     registerStudent(student) {
         if (!this.isStudentRegistered(student)) {
@@ -26,12 +26,11 @@ class CourseManager {
     courses = [];
     addCourse(course) {
         this.courses.push(course);
-        console.log(`[Менеджер] Курс "${course.name}" додано до системи.`);
+        console.log(`[Manager] Course "${course.name}" added to the system.`);
     }
     removeCourse(courseName) {
-        // Фільтруємо масив, залишаючи всі курси, крім того, який треба видалити
         this.courses = this.courses.filter(c => c.name !== courseName);
-        console.log(`[Менеджер] Курс "${courseName}" видалено (якщо він існував).`);
+        console.log(`[Manager] Course "${courseName}" removed (if it existed).`);
     }
     // Метод повертає курс або undefined, якщо його не знайдено
     findCourse(courseName) {
@@ -39,20 +38,20 @@ class CourseManager {
     }
     // Додатковий метод для зручного виводу, як вимагає умова
     printAllCourses() {
-        console.log("\n--- Список усіх курсів ---");
+        console.log("\n--- List of all courses ---");
         if (this.courses.length === 0) {
-            console.log("Курсів немає.");
+            console.log("No courses available.");
             return;
         }
         for (const course of this.courses) {
             const studentList = course.students.length > 0
                 ? course.students.join(", ")
-                : "Немає зареєстрованих студентів";
-            console.log(`Курс: ${course.name} (${course.duration} год) | Студенти: ${studentList}`);
+                : "No registered students";
+            console.log(`Course: ${course.name} (${course.duration} hours) | Students: ${studentList}`);
         }
     }
 }
-console.log("--- Запуск системи Course Manager ---");
+console.log("--- Launching Course Manager System ---");
 const manager = new CourseManager();
 // Створюємо курси
 const javaCourse = new OnlineCourse("Java OOP & GRASP", 45);
@@ -61,18 +60,18 @@ const pythonCourse = new OnlineCourse("Python Telegram Bots", 30);
 manager.addCourse(javaCourse);
 manager.addCourse(pythonCourse);
 // Реєструємо студентів
-console.log("\n--- Реєстрація студентів ---");
-javaCourse.registerStudent("Богдан");
-javaCourse.registerStudent("Олена");
-javaCourse.registerStudent("Богдан"); // Спроба дублювання
-pythonCourse.registerStudent("Богдан");
+console.log("\n--- Student Registration ---");
+javaCourse.registerStudent("Bogdan");
+javaCourse.registerStudent("Eva");
+javaCourse.registerStudent("Bogdan"); // Спроба дублювання
+pythonCourse.registerStudent("Bogdan");
 // Виводимо всі курси
 manager.printAllCourses();
 // Тестуємо пошук та видалення
-console.log("\n--- Пошук та видалення ---");
+console.log("\n--- Search and Removal ---");
 const found = manager.findCourse("Java OOP & GRASP");
 if (found) {
-    console.log(`Знайдено курс: ${found.name}, тривалість: ${found.duration} год.`);
+    console.log(`Found course: ${found.name}, duration: ${found.duration} hours.`);
 }
 manager.removeCourse("Python Telegram Bots");
 manager.printAllCourses();
